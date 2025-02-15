@@ -19,10 +19,16 @@ A Discord bot that uses Google's Gemini AI for chat interactions.
    python bot.py
    ```
 
-## Usage
+## Commands
 
-- Use `!chat <message>` to interact with the Gemini AI
-- The bot will respond with AI-generated content
+The bot uses slash commands:
+
+- `/enable_chat [true/false]` - Enable or disable AI chat in the current channel
+- `/generate [text/image] [prompt]` - Generate content based on a prompt
+- `/set_persona [persona]` - Set the AI's conversation style
+  - Available personas: default, friendly, professional, casual
+
+When chat is enabled in a channel, the bot will respond to all messages automatically.
 
 ## Requirements
 - Python 3.7+
