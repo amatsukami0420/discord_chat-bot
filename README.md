@@ -26,7 +26,7 @@ The bot uses slash commands:
 - `/enable_chat [true/false]` - Enable or disable AI chat in the current channel
 - `/generate [text/image] [prompt]` - Generate content based on a prompt
 - `/set_persona [persona]` - Set the AI's conversation style
-  - Available personas: default, friendly, professional, casual
+  - Available personas: Sheldon, Jeremiah, Hanabi
 
 When chat is enabled in a channel, the bot will respond to all messages automatically.
 
