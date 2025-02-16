@@ -1,37 +1,78 @@
-# Discord Bot with Gemini AI Integration
+# Discord AI Assistant Bot
 
-A Discord bot that uses Google's Gemini AI for chat interactions.
+A Discord bot powered by Google's Gemini AI that provides chat capabilities with multiple personas and command functionalities.
 
-## Setup
+## Features
 
-1. Install requirements:
-   ```bash
-   pip install -r requirements.txt
-   ```
+- 🤖 AI-powered conversations using Gemini Pro
+- 🎭 Multiple personas with unique personalities
+- 💬 Channel-specific chat sessions
+- ⌨️ Support for both slash commands and prefix commands
+- 🔧 Comprehensive help system with categories
 
-2. Configure environment variables:
-   - Create a `.env` file
-   - Add your Discord bot token: `DISCORD_TOKEN=your_token_here`
-   - Add your Gemini API key: `GEMINI_API_KEY=your_key_here`
+## Available Personas
 
-3. Run the bot:
-   ```bash
-   python bot.py
-   ```
+- 🤓 **Sheldon**: A witty and sarcastic physicist
+- 😎 **Jeremiah**: Street-smart tech entrepreneur
+- 🌸 **Hanabi**: Anime-loving Japanese student
+- 🙏 **Ashok**: Knowledgeable Indian electrician
 
 ## Commands
 
-The bot uses slash commands:
+### 🔧 Basic Commands
+- `/help` or `!help`: Show all commands or get help for a specific command
+- `/chat` or `!chat`: Enable or disable AI chat in the current channel
 
-- `/enable_chat [true/false]` - Enable or disable AI chat in the current channel
-- `/generate [text/image] [prompt]` - Generate content based on a prompt
-- `/set_persona [persona]` - Set the AI's conversation style
-  - Available personas: Sheldon, Jeremiah, Hanabi
+### 🤖 AI Commands
+- `/ask` or `!ask`: Ask the AI a specific question and get a response
+- `/imagine` or `!imagine`: Get an AI-generated description of an imagined scene
 
-When chat is enabled in a channel, the bot will respond to all messages automatically.
+### 🎭 Persona System
+- `/persona` or `!persona`: List available personas or change the AI's personality
 
-## Requirements
-- Python 3.7+
-- Discord.py
-- Google Generative AI library
-- python-dotenv
+## Setup
+
+1. Clone this repository
+2. Install required dependencies:
+```bash
+pip install discord.py google-generativeai python-dotenv
+```
+
+3. Create a `.env` file with your tokens:
+```
+DISCORD_TOKEN=your_discord_token
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+4. Run the bot:
+```bash
+python bot.py
+```
+
+## Configuration
+
+The bot uses the following default settings:
+- Command prefix: `!`
+- Default system prompt: "You are a helpful AI assistant."
+- Message context: Maintains last 10 messages per channel
+- Character limit: 2000 characters per message
+
+## Safety Settings
+
+The bot is configured with minimal content filtering to allow for more natural conversations. All safety categories are set to `BLOCK_NONE`:
+- Harassment
+- Hate Speech
+- Sexually Explicit
+- Dangerous Content
+
+## Error Handling
+
+The bot includes basic error handling for:
+- Empty messages
+- Message length limits
+- API errors
+- Response generation failures
+
+## Contributing
+
+Feel free to submit issues and enhancement requests!
